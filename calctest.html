@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="calctest.css">
+  <script src="calctest.js"></script>
+  <title>Grade Calculator Web App</title>
+</head>
+
+    
+    <body>
+
+      <section id= "main">
+
+        <header></header> 
+      
+        <h2>Grade Calculator</h2>
+      
+        
+
+        <form id="partgrey" action="calctest.html">
+
+          <h3>Activities</h3>
+        
+          <p>Give grades to the numeric activities:</p>
+
+          <table id="tableofgrades">
+
+            <tr>
+              <th>Name</th>
+              <th>Short Name</th>
+              <th>Weight</th>
+              <th>Grade</th>
+              <th>Percent</th>
+            </tr>
+            
+            <tr>
+              <td>Activity 1</td>
+              <td>A1</td>
+              <td><input type="text" inputmode=”numeric” id="gradeweight1" minlength="0"  maxlength="3" size="3" min="0" required max="100"></td>
+              <td><input type="text" inputmode=”numeric” id="gradegotten1"  onkeyup="percentcalc(1)"  minlength="0" size="3" >/<input type="text" inputmode=”numeric” id="graderecieved1" onkeyup="percentcalc(1)"   minlength="0" size="3" > </td> 
+              <td><div id="calcpercentage1"></div></td>
+            </tr>
+            
+            <tr>
+              <td>Activity 2</td>
+              <td>A2</td>
+              <td><input type="text" inputmode=”numeric” id="gradeweight2" required minlength="0" maxlength="3" size="3" min="0" max="100"></td> <!-- there is a way to only put numbers or make it so that it only recievs numbers -->
+              <td><input type="text" inputmode=”numeric” id="gradegotten2"  onkeyup="percentcalc(2)"  minlength="0" size="3" >/<input type="text" inputmode=”numeric” id="graderecieved2" onkeyup="percentcalc(2)"  minlength="0" size="3" > </td> 
+              <td><div id="calcpercentage2"></div></td> 
+            </tr>
+
+            <tr>
+              <td>Activity 3</td>
+              <td>A3</td>
+              <td><input type="text" required minlength="0" id="gradeweight3" maxlength="3" size="3" min="0" max="100"></td> <!-- there is a way to only put numbers or make it so that it only recievs numbers -->
+              <td><input type="text" inputmode=”numeric” id="gradegotten3"  onkeyup="percentcalc(3)"  minlength="0" size="3" >/<input type="text" inputmode=”numeric” id="graderecieved3" onkeyup="percentcalc(3)"  minlength="0" size="3" > </td> 
+              <td><div id="calcpercentage3"></div></td> 
+            </tr>
+
+            <tr>
+              <td>Activity 4</td>
+              <td>A4</td>
+              <td><input type="text" inputmode=”numeric” required minlength="0" id="gradeweight4" maxlength="3" size="3" min="0" max="100"></td><!-- there is a way to only put numbers or make it so that it only recievs numbers -->
+              <td><input type="text" inputmode=”numeric” id="gradegotten4"  onkeyup="percentcalc(4)"  minlength="0" size="3" >/<input type="text" inputmode=”numeric” id="graderecieved4" onkeyup="percentcalc(4)"  minlength="0" size="3" > </td> 
+              <td><div id="calcpercentage4"></div></td> 
+            </tr>
+
+          </table>
+
+          <br>
+
+          <button type="button" onclick="insert_Row()" class="button" button1>ADD ACITIVITY</button>
+
+          <button type="button" onclick="weightedgrade()" class="button" button2>WEIGHTED</button>
+
+          <button type="button" onclick="meangrade()" class="button" button3>MEAN</button>  
+          <br>
+
+          <h3 id="res">Results</h3>
+          <br>
+          <section id="results">
+          
+          
+          </section>
+
+        
+      </form>
+
+        
+      
+        <footer></footer>
+      
+      </section>
+      
+    </body>
+
+    
+
+
+</html> 
