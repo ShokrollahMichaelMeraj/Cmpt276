@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel = "stylesheet" href = "/stylesheets/main.css">
+  <title>DATABASE WEBSITE CMPT276</title>
+</head>
+
+<header>
+  <div id="Navagation">
+    <a id="nav" href="/">  Home  </a>
+    <a id="nav" href="database">  Table of Rectangles  </a>
+    
+  </div>
+</header>
+
+<body>
+    <div class="main">
+      <div class="paragraph box">
+        <p id="intoparagraph">
+          <br>
+          Welcome to the CMPT276 Rectangle Database. 
+          <br>
+          In this website I will be demontsarting my ability to use PSQL database integration with ejs, html, and css. 
+          <br>
+          We will be taking a look at the database named Rectangles which contains name colors and measuresments for datum known as rectangles.
+          <br>
+          Take your time and enjoy the experience.
+        </p>
+      </div>
+    </div>
+  </div>
+  <h3 Id="head">Please Add The Required Data for the Desired Outcome </h3>
+  <form action="/addData" method="post">
+
+    <table id="tableofgrades">
+
+      <tr>
+        <th>Name</th>
+        <th>Color</th>
+        <th>Width</th>
+        <th>Height</th>
+        <th>Id</th>
+      </tr>
+      
+      <tr>
+        <td> <input type="text" id="username" name="name"  placeholder="name"></td>
+        <td><input type="color" id="ccolor" name="color"  placeholder="color"> </td>
+        <td><input type="number" id="mwidth" name="width"  placeholder="width"></td>
+       <td> <input type="number" id="mheight" name="height"  placeholder="height"></td>
+        <td><input type="number" id="uid" name="uid"  placeholder="userid"></td> 
+      </tr>
+    </table>
+    <br>
+      <input type="submit"  onclick="check()" id="submit" value="ADD"><br>
+  </form>
+</div>
+<script>
+  function check(){
+      var name =  document.getElementById("username")
+      var color = document.getElementById("ccolor")
+      var height = document.getElementById("mwidth")
+      var width = document.getElementById("mheight")
+      var uid = document.getElementById("uid")
+
+      if(name.value != "" && color.value != undefined && height.value != "" && width.value != "" && name.value != ""){
+        return;
+      }
+      alert("Please Fill the Form Correctly");
+    
+  }
+
+</script>
+</body>
+
+<footer></footer>
+
+</html>

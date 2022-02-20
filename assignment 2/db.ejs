@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel = "stylesheet" href = "./stylesheets/table.css">
+  </head>
+
+  <header>
+    <a id="nav" href="/">  Home  </a>
+    <a id="nav" href="database">  Table of Rectangles  </a>
+  </header>
+  <br>
+  <body>
+      <table id="myTable">
+        <tr id="tableHeader">
+          <th></th><th>Name</th><th>Color</th>><th>delete rectangle</th>
+        </tr>
+        
+        <% var i=0 %>
+        <% rows.forEach(function(r) { %>
+          <tr>
+            <%i++%>
+            <td><%= i %></td>
+            <td>
+                <%= r.name%>
+            </td>
+            <td><%= r.color%></td>
+          <td>
+            <form action="/delete" method="post" >
+              <input type="hidden" name="id" value="<%= r.userid%>">
+              <input type="submit" id="delete" name="sub" value="delete"><br>
+            </form>
+          </td>
+          </tr>
+        <% }); %>
+      </table>
+
+  </body>
+
+  <footer></footer>
+</html>
